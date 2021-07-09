@@ -1,0 +1,17 @@
+{
+  "name": "bootcapmmodulo2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "7.7.0",
+    "faker": "5.5.3"
+  },
+  "scripts": {
+    "cy:run:electron": "npx cypress run",
+    "cy:run:chrome": "npx cypress run --browser chrome --headless",
+    "cy:run:firefox": "npx cypress run --browser firefox --headless"
+  },
+  "author": "",
+  "license": "ISC"
+}
