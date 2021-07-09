@@ -6,5 +6,8 @@
     "email": "fabio@mail.com",
     "password": "teste1234"
   },
-  "defaultCommandTimeout": 17000
+  "reporter": "junit",
+  "reporterOptions": {
+    "mochaFile": "cypress/reports/junit-[hash].xml"
+  }
 }
