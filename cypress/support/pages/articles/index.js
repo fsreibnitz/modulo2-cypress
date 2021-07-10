@@ -1,39 +1,41 @@
 /// <reference types="cypress" />
 
-const faker = require('faker')
-const elements = require('./elements').ELEMENTS
 import Routes from '../routes'
 
+const faker = require('faker')
+const elements = require('./elements').ELEMENTS
+
 class Articles {
-	acessarFormularioNovoPost(){
-		cy.get('a[href*=editor]').click()
+
+	acessarFormularioNovoPost(){ //Arrange
+		cy.get(elements.linkNovoPost).click()
 	}
 
-	preencherFormulario(){
-		cy.get(elements.inputTitle).type('Teste')
+//Act
+	preencherFormulario(){ 
+		cy.get(elements.inputTitle).type(Cypress.config().post.title)
 		cy.get(elements.inputDescription).type(faker.lorem.text())
 		cy.get(elements.textAreaBody).type(faker.lorem.sentences(1))
 		cy.get(elements.inputTagField).type(faker.lorem.words(3))
 	}
 
-	submeterPost(){
+	submeterPost(){ 
 		cy.get(elements.buttonSubmit).click()
-
 	}
- 
-	verificarSePostFoiCriadoComSucesso(){
-	
-		//template string
-	 cy.wait(`@${Routes.nomeRotas.postArticles}`).then(({request,response}) => {
-		 expect(response.statusCode).to.eq(200)
-	 })
 
-	 cy.wait(`@${Routes.nomeRotas.getArticlesTitle}`).then(({request,response}) => {
-		 expect(response.statusCode).to.eq(200)
-	 })
-	 cy.wait(`@${Routes.nomeRotas.getArticlesTitleComments}`).then(({request,response}) => {
-		 expect(response.statusCode).to.eq(200)
-	 })
+ //Assert
+	verificarSePostFoiCriadoComSucesso(){ 
+	 	cy.wait(`@${Routes.nomeRotas.postArticles}`).then(({response}) => {
+			 expect(response.statusCode).to.eq(200)
+	 	})
+
+		cy.wait(`@${Routes.nomeRotas.getArticlesTitle}`).then(({response}) => {
+		 	expect(response.statusCode).to.eq(200)
+	 	})
+
+	 	cy.wait(`@${Routes.nomeRotas.getArticlesTitleComments}`).then(({response}) => {
+		 	expect(response.statusCode).to.eq(200)
+		 })
 	}
 }
 

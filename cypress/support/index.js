@@ -41,6 +41,6 @@ Cypress.Commands.add('backGroundLogin', () => {
 
 })
 
-before(() => {
+beforeEach(() => {
 	Routes.init()
 })

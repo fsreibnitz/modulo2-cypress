@@ -1,22 +1,22 @@
-# Cypress.io end-to-end tests 🚀
+# Desafio Módulo 2 - BootCamp Agilizei T6
 
-[Cypress.io](https://www.cypress.io) is an open source, MIT licensed end-to-end test runner
+O desafio consiste em executar testes de front end no ambiente [http://demo.realworld.io/](http://demo.realworld.io/).
+Os testes são feitos nos módulos de Cadastro, Login e Postagem de Artigo.
+Para a organização do projeto foi utilizado o padrão Page Objects e AAA ([Arrange Act Assert](https://github.com/testdouble/contributing-tests/wiki/Arrange-Act-Assert))
 
-## Folder structure
+## Configuração (cypress.json)
 
-These folders hold the end-to-end tests and supporting files for the [Cypress Test Runner](https://github.com/cypress-io/cypress).
+Neste arquivo estão algumas configurações utilizadas durante os testes, como url's, usuário e título do artigo a ser publicado, pois interfere nas rotas.
 
-- [fixtures](fixtures) folder holds optional JSON data for mocking, [read more](https://on.cypress.io/fixture)
-- [integration](integration) holds the actual test files, [read more](https://on.cypress.io/writing-and-organizing-tests)
-- [plugins](plugins) allow you to customize how tests are loaded, [read more](https://on.cypress.io/plugins)
-- [support](support) file runs before all tests and is a great place to write or load additional custom commands, [read more](https://on.cypress.io/writing-and-organizing-tests#Support-file)
+## Arquivos dos módulos
 
-## `cypress.json` file
+Cada módulo testado possui seu diretório em Pages, cada módulo possui os arquivos index.js e elements.js
 
-You can configure project options in the [../cypress.json](../cypress.json) file, see [Cypress configuration doc](https://on.cypress.io/configuration).
+index.js: neste arquivo são criados os métodos que serão chamados pelas SPEC's
+em alguns arquivos, foi utilizado o faker para gerar dados aleatórios.
 
-## More information
+elements.js: neste arquivo estão definidos os elementos que serão utilizados pelos métodos do index.js
 
-- [https://github.com/cypress.io/cypress](https://github.com/cypress.io/cypress)
-- [https://docs.cypress.io/](https://docs.cypress.io/)
-- [Writing your first Cypress test](https://on.cypress.io/intro)
+## Relatório
+
+Foi utilizado o junit reporter para geração dos relatórios, os relatórios devem ser acessados pelo Azure Pipelines (mas até o momento não tive acesso a plataforma)

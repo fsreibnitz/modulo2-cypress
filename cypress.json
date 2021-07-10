@@ -6,6 +6,9 @@
     "email": "fabio@mail.com",
     "password": "teste1234"
   },
+  "post": {
+    "title": "Modulo 2"
+  },
   "reporter": "junit",
   "reporterOptions": {
     "mochaFile": "cypress/reports/junit-[hash].xml"
