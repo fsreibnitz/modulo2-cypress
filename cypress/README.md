@@ -20,3 +20,4 @@ elements.js: neste arquivo estão definidos os elementos que serão utilizados p
 ## Relatório
 
 Foi utilizado o junit reporter para geração dos relatórios, os relatórios devem ser acessados pelo Azure Pipelines (mas até o momento não tive acesso a plataforma)
+As configurações estão no arquivo azure-pipelines.yml
