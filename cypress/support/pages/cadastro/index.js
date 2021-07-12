@@ -5,22 +5,24 @@ const elements =  require('./elements').ELEMENTS
 const faker = require('faker')
 
 class Cadastro {
-	
-	acessarCadastro(){ //Arrange
+	//Arrange
+	acessarCadastro(){ 
 		cy.visit('register')
 	}
 
-	preencherCadastro(){ //Act
+ //Act
+	preencherCadastro(){
 		cy.get(elements.inputUsername).type(faker.name.firstName() + faker.name.lastName())
 		cy.get(elements.inputEmail).type(faker.internet.email())
 		cy.get(elements.inputPassword).type('teste1234')
 	}
 
-	enviarCadastro(){ //Act
+	enviarCadastro(){ 
 		cy.get(elements.buttonSubmit).click()
 	}
 
-	verificarCadastroCriadoComSucesso(){ //Assert
+	 //Assert
+	verificarCadastroCriadoComSucesso(){
 		cy.wait(`@${Routes.nomeRotas.postUser}`).then(({response}) => {
 			expect(response.statusCode).to.eq(200)
 		})
