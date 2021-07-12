@@ -21,7 +21,10 @@ elements.js: neste arquivo estão definidos os elementos que serão utilizados p
 
 ## Relatório
 
-Foi utilizado o junit reporter para geração dos relatórios, os relatórios devem ser acessados pelo Azure Pipelines (mas até o momento não tive acesso a plataforma)
+Foi utilizado o jUnit reporter para geração dos relatórios, os relatórios devem ser acessados pelo Azure Pipelines.
 As configurações estão no arquivo azure-pipelines.yml
+
+OBS: ao criar a conta na Azure não obtive sucesso na execução, depois de enviar um email solicitando acesso free à plataforma, consegue executar os testes.
+os erros reportados no relatório foram erros de resposta do servidor de teste, não foram erro de algoritmo.
 
 ![azure](https://user-images.githubusercontent.com/13247837/125363698-7cbee300-e347-11eb-9058-462f519b5a4d.gif)
