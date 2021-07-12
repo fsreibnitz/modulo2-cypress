@@ -1,5 +1,7 @@
 # Desafio Módulo 2 - BootCamp Agilizei T6
 
+![testeComplete](https://user-images.githubusercontent.com/13247837/125364463-e4296280-e348-11eb-986a-11c37bbf352b.gif)
+
 O desafio consiste em executar testes de front end no ambiente [http://demo.realworld.io/](http://demo.realworld.io/).
 Os testes são feitos nos módulos de Cadastro, Login e Postagem de Artigo.
 Para a organização do projeto foi utilizado o padrão Page Objects e AAA ([Arrange Act Assert](https://github.com/testdouble/contributing-tests/wiki/Arrange-Act-Assert))
@@ -21,3 +23,5 @@ elements.js: neste arquivo estão definidos os elementos que serão utilizados p
 
 Foi utilizado o junit reporter para geração dos relatórios, os relatórios devem ser acessados pelo Azure Pipelines (mas até o momento não tive acesso a plataforma)
 As configurações estão no arquivo azure-pipelines.yml
+
+![azure](https://user-images.githubusercontent.com/13247837/125363698-7cbee300-e347-11eb-9058-462f519b5a4d.gif)
